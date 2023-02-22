@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Create Product</h1>
+    <h2>Detail Product</h2>
+    <form>
+        <div class="first">
+            <label for="firstName">Product Name :</label><br>
+            <input maxlength="50" minlength="6" required type="text" id="firstName" name="firstName"><br>
+        </div>
+        <div class="catg">
+            <label for="category">Product Category :</label><br>
+            <select>
+                <option>Electronic</option>
+                <option>Fashion</option>
+            </select>
+        </div>
+        <form>
+            <label for="">Product Freshness :</label><br>
+            <input required type="radio" id="brand" name="freshness">
+            <label for="brand">Brand New</label><br>
+            <input type="radio" id="sec" name="freshness">
+            <label for="sec">Second Hank</label><br>
+            <input type="radio" id="reff" name="freshness">
+            <label for="reff">Refurbished</label><br>
+        </form>
+        <div>
+            <label>Image of Product</label>
+            <input required type="file" value="upload gambar"/>
+        </div>
+        <div>
+            <label>Additional Description</label><br>
+            <textarea required>
+            </textarea>
+        </div>
+        <div>
+            <label for="">Product Price :</label><br>
+            <input required type="number" id="price" name="price" value="$ 100"><br>
+            <a href="landingPage.html"><button>Submit</button></a>
+        </div>
+    </form>
+    
+</body>
+</html>

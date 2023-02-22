@@ -1,0 +1,63 @@
+body{
+    margin: 0 0;
+}
+
+ul a{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    font-family: 'Roboto';
+    font-style: normal;
+}
+
+.contents{
+    margin-left: 94px;
+    margin-top: 80px;
+}
+
+.content-wrapper h1{
+    max-width: 550px;
+    font-size: 48px;
+}
+
+.content-wrapper p{
+    margin-top: -20px;
+    max-width: 550px;
+    font-size: 24px;
+}
+
+#subStart{
+    background-color: white;
+    border-style: groove;
+    border-color: black;
+    font-size: 16px;
+    padding: 10px 27px;
+    margin-top: 50px;
+}
+
+#subWatch{
+    background-color: white;
+    font-size: 16px;
+    padding: 10px 27px;
+    border: none;
+}
+
+.content-two-wrapper button{
+    background-color: white;
+    border-style: groove;
+    border-color: black;
+    font-size: 16px;
+    padding: 10px 27px;
+}
+
+.content-two-wrapper h1 {
+    font-size: 24px;
+}
+
+.content-two-wrapper h1 {
+    font-size: 15px;
+}
+
+footer{
+    margin-left: 94px;
+}
