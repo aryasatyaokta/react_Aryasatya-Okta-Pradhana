@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+    <nav>
+        <p style="float:left" ><a>Simple Header</a></p>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+    <div style="margin-top: 50px;">
+        <div style="text-align: center;">
+            <img src="image/bootstrap.png" alt="" style="width: 71px; height: 57px; ">
+            <h1>Create Product</h1>
+            <p style="font-size: 20px; max-width: 900px; margin: auto;">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a 
+                validation state that can be triggered by attempting to submit the form without completing it.</p>
+        </div>
+        <div style="margin-left: 320px; padding: 16px; ">
+            <h2>Detail Product</h2>
+            <form>
+                    <label for="firstName" >Product Name :</label><br>
+                    <input maxlength="50" minlength="6" required type="text" id="firstName" name="firstName"><br>
+                    <label for="category">Product Category :</label><br>
+                    <select>
+                        <option>Choose...</option>
+                        <option>Electronic</option>
+                        <option>Fashion</option>
+                    </select><br>
+
+                    <label for="">Product Freshness :</label><br>
+                    <input required type="radio" id="brand" name="freshness">
+                    <label for="brand">Brand New</label><br>
+                    <input type="radio" id="sec" name="freshness">
+                    <label for="sec">Second Hank</label><br>
+                    <input type="radio" id="reff" name="freshness">
+                    <label for="reff">Refurbished</label><br>
+                    
+                    <label>Image of Product</label><br>
+                    <input required type="file"><br>
+                    
+                    <label>Additional Description</label><br>
+                    <textarea required>
+                    </textarea><br>
+                    
+                    <label for="">Product Price :</label><br>
+                    <input required type="number" id="price" name="price" value="$ 100"><br>
+            </form>
+        </div>
+        <a href="landingPage.html"><button class="btn-submit">Submit</button></a>
+        <table>
+            <h1 style="text-align: center;">List Product</h1>
+            <tr>
+              <th>No</th>
+              <th>Product Name</th>
+              <th>Product Category</th>
+              <th>Image of Product</th>
+              <th>Product Freshness</th>
+              <th>Additional Description</th>
+              <th>Product Price</th>
+            </tr>
+            <tr>
+              <td>1,001</td>
+              <td>Lorem</td>
+              <td>ipsum</td>
+              <td>dolor</td>
+              <td>Brand New</td>
+              <td>Adipiscing</td>
+              <td>1</td>
+            </tr>
+            <tr>
+                <td>1,002</td>
+                <td>Lorem</td>
+                <td>ipsum</td>
+                <td>dolor</td>
+                <td>Brand New</td>
+                <td>Adipiscing</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>1,003</td>
+                <td>Lorem</td>
+                <td>ipsum</td>
+                <td>dolor</td>
+                <td>Brand New</td>
+                <td>Adipiscing</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>1,004</td>
+                <td>Lorem</td>
+                <td>ipsum</td>
+                <td>dolor</td>
+                <td>Brand New</td>
+                <td>Adipiscing</td>
+                <td>9</td>
+            </tr>
+          </table>
+          <input required type="text" id="search-product" value="Seacrh by Product Name"><br>
+          <div>
+            <button class="btn-deletion">Deletion<button class="btn-seacrh">Search</button></button> 
+          </div>
+    </div>
+</body>
+</html>
