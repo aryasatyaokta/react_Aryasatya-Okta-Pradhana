@@ -7,3 +7,4 @@ Pada pembelajaran materi figma kali ini membahas tentang :
 5. cara menggunakan prototype
 6. pengertian design thingking
 7. pengertian user persona
+8. slicing ui ke css / bootstrap
