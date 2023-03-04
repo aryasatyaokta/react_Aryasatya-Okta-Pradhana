@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow p-3 mb-5 bg-body-tertiary rounded">
+        <div class="container-fluid">
+          <a class="navbar-brand">Simple Header</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link btn btn-primary text-light" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-primary" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-primary" href="#">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-primary">FAQs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-primary" href="#">About</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="container my-5">
+		<div class="container">
+			<div class="col-md-6 offset-md-3">
+        <div id="carouselExampleCaptions" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="image/new.jfif" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block bg-primary">
+                <h5>Brand New</h5>
+                <p>Some representative placeholder content for the first slide.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="image/second.jfif" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block bg-primary">
+                <h5>Second Hand</h5>
+                <p>Some representative placeholder content for the second slide.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="image/refuf.jfif" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block bg-primary">
+                <h5>Refufbhised</h5>
+                <p>Some representative placeholder content for the third slide.</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+				<h2 style="text-align: center;">Create Product</h2>
+          <p style="text-align: center;">Below is an example form built entirely with Bootstrap’s 
+            form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+				<form class="create-product" onsubmit="return validateForm()">
+          <h2>Detail Product</h2>
+					<div class="form-group my-3">
+						<label for="productName">Product Name</label>
+						<input type="text" class="form-control" id="productName">
+					</div>
+					<div class="form-group my-3">
+						<label for="">Product Category</label>
+						<select class="form-control" id="productCategory">
+							<option>Choose...</option>
+							<option value="fashion">Fashion</option>
+							<option value="beauty">Beauty</option>
+						</select>
+					</div>
+					<div class="row mt-2">
+            <div class="col-6 position-relative">
+                <label class="form-label fw-semibold" for="customFile">Image of product</label>
+                <input type="file" class="form-control" id="uploadFile" />
+            </div>
+        </div>
+          <div class="row my-3" id="prodFres">
+            <p>Product Freshness</p>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" value="Brand New" name="btnRadio" id="Radio1">
+                <label class="form-check-label" for="Radio1">
+                  Brand New
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" value="Second Hand" name="btnRadio" id="Radio2">
+                <label class="form-check-label" for="Radio2">
+                  Second Hand
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" value="Refufbhised" name="btnRadio" id="Radio3">
+                <label class="form-check-label" for="Radio3">
+                  Refufbhised
+                </label>
+              </div>
+          </div>
+					<div class="form-group my-3">
+						<label for="description">Additional Description</label>
+						<textarea class="form-control" id="addDesc" rows="3"></textarea>
+					</div>
+            <div class="form-group my-3">
+						<label for="productPrice">Product Price</label>
+						<input type="number" class="form-control" id="productPrice">
+					</div>
+					<button type="submit" onclick="addData(); return false;" class="btn btn-primary center-block alert alert-primary" style="width: 400px; margin-left: 12%; margin-top: 50px;">Submit</button>
+				</form>
+			</div>
+      <table class="table" id="productTable">
+        <thead>
+          <tr>
+            <th id="no">No</th>
+            <th>Product Name</th>
+            <th>Product Category</th>
+            <th>Image of Product</th>
+            <th>Product Freshness</th>
+            <th>Additional Description</th>
+            <th>Product Price</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+      <div class="col-xs-3">
+        <input type="text" class="form-control" id="Search" placeholder="Search by Product Name">
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary">Deletion</button>
+        <button type="button" class="btn btn-outline-primary">Search</button>
+      </div>
+      
+		</div>
+	</div>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+  <script>
+    document.getElementById("productName").maxLength=25;
+    function validateForm(e) {
+			var productName = document.getElementById("productName").value;
+      var productPrice = document.getElementById("productPrice").value;
+      var regex = /[**@/#{}**]/;
+      var productCategory = document.getElementById("productCategory").value;
+      var uploadFile = document.getElementById("uploadFile").files[0];
+      var addDesc = document.getElementById("addDesc").value;
+      var selectedProductFreshness;
+
+
+      if (productName.length==0){
+        alert("Please enter a valid Product Name.");
+        //return;
+      } else if (productName.length > 10) {
+				alert("Product Name must not exceed 25 characters.");
+				//return;
+			}
+      if (regex.test(productName)) {
+				alert("Name must not contain symbols.");
+				return false;
+			}
+      
+      if (productCategory === ""){
+        alert("The Product Category field must be filled in")
+      }
+
+      if (!uploadFile){
+        alert("The File field must be filled in")
+      }
+
+      if (document.getElementById('Radio1').checked){
+        selectedProductFreshness = document.getElementById("Radio1").value
+      } else if(document.getElementById('Radio2').checked){
+        selectedProductFreshness = document.getElementById("Radio2").value
+      } else if(document.getElementById('Radio3').checked){
+        selectedProductFreshness = document.getElementById("Radio3").value
+      }
+
+      if(!selectedProductFreshness){
+        alert("The Product Freshness field must be filled in");
+        return false;
+      }  
+
+      if (addDesc === ""){
+        alert("The Description field must be filled in")
+      }
+
+      if (productPrice.length==0){
+        alert("Please enter a valid Product Price.");
+        return
+      }
+			//return true;
+      e.preventDefault();
+		}
+
+    function addData(){
+      var baris = productTable.insertRow(-1);
+      var selectedProductFreshness;
+
+      if (document.getElementById('Radio1').checked){
+        selectedProductFreshness = document.getElementById("Radio1").value
+      } else if(document.getElementById('Radio2').checked){
+        selectedProductFreshness = document.getElementById("Radio2").value
+      } else if(document.getElementById('Radio3').checked){
+        selectedProductFreshness = document.getElementById("Radio3").value
+      }
+
+      var baris0 = baris.insertCell(0);
+      var baris1 = baris.insertCell(1);
+      var baris2 = baris.insertCell(2);
+      var baris3 = baris.insertCell(3);
+      var baris4 = baris.insertCell(4);
+      var baris5 = baris.insertCell(5);
+      var baris6 = baris.insertCell(6);
+
+      baris0.innerHTML = document.getElementById("productTable").getElementsByTagName('tbody')[0].rows.length + 1;
+      baris1.innerHTML = document.getElementById("productName").value;
+      baris2.innerHTML = document.getElementById("productCategory").value;
+      baris3.innerHTML = document.getElementById("uploadFile").files[0];
+      baris4.innerHTML = selectedProductFreshness;
+      baris5.innerHTML = document.getElementById("addDesc").value;
+      baris6.innerHTML = document.getElementById("productPrice").value;
+    }
+
+  </script>
+</body>
+</html>
