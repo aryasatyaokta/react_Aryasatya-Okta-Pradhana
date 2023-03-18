@@ -1,7 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import logo from '../img/icon.png'
+import data from '../file.json'
 
 export default function Content() {
+
+    const [productName, setProductName] = useState('');
+
+    const handleChangProductName = (e) => {
+        const value = e.target.value;
+        if(value.length <= 10){
+            setProductName(value)
+        }
+    }
+
+    const handleClick = (e) => {
+        const randomNumber = Math.floor(Math.random() * 100);
+        console.log({randomNumber});
+        e.preventDefault();
+    }
+
   return (
     <>
     <div className="container my-5">
@@ -9,18 +26,14 @@ export default function Content() {
             <div className="col-md-6 offset-md-3">
                 <div className='text-center'>
                     <img src={logo} style={{width: "20%"}}/>
+                        <h2 className='text-center'>{data.title.en}</h2>
+                        <p className='text-center'>{data.description.en}</p>
                 </div>
-                <h2 className='text-center'>Create Product</h2>
-                <p className='text-center'>
-                Below is an example form built entirely with Bootstrap’s form
-                controls. Each required form group has a validation state that can be
-                triggered by attempting to submit the form without completing it.
-                </p>
                 <form className="create-product">
                 <h2 style={{textAlign: "center"}}>Detail Product</h2>
                 <div className="form-group my-3">
                     <label htmlFor="productName">Product Name</label>
-                    <input type="text" className="form-control" id="productName" />
+                    <input value={productName} onChange={handleChangProductName} type="text" className="form-control" id="productName" />
                 </div>
                 <div className="form-group my-3">
                     <label htmlFor="">Product Category</label>
@@ -91,6 +104,7 @@ export default function Content() {
                     <input type="number" className="form-control" id="productPrice" />
                 </div>
                 <button
+                    onClick={handleClick}
                     type="submit"
                     className="btn btn-primary center-block alert alert-primary"
                     style={{ width: 400, marginLeft: "12%", marginTop: 50 }}
