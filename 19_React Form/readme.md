@@ -4,7 +4,7 @@
     -	Elemen <input>
     -	Elemen <textarea>
     -	Elemen <select>
-
+    
 2.	Controlled Component
     Controlled Component adalah menggabungkan cara menyimpan dan memperbarui state 
     di HTML dan React dengan menggunakan state pada React. Kemudian Komponen react yang merender 
